@@ -1,20 +1,73 @@
-// import type { Core } from '@strapi/strapi';
+// src/index.ts
 
 export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register() {},
+  bootstrap: async ({ strapi }) => {
+    console.log('Atualizando Permissões...');
+    const publicRole = await strapi.query('plugin::users-permissions.role').findOne({
+      where: { type: 'public' },
+    });
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+    if (!publicRole) {
+      console.error('Papel público não encontrado');
+      return;
+    }
+
+    const permissionsToEnable = [
+      {
+        contentTypeUid: 'api::cidade.cidade',
+        actions: ['find', 'findOne'],
+      },
+      {
+        contentTypeUid: 'api::estado.estado',
+        actions: ['find', 'findOne'],
+      },
+      {
+        contentTypeUid: 'api::pessoa.pessoa',
+        actions: ['find', 'findOne', 'create'],
+      },
+    ];
+
+    for (const permission of permissionsToEnable) {
+      const { contentTypeUid, actions } = permission;
+      const contentType = strapi.contentType(contentTypeUid);
+
+      if (!contentType) {
+        console.warn(`Tipo de conteúdo não encontrado: ${contentTypeUid}`);
+        continue;
+      }
+
+      for (const action of actions) {
+        const actionName = `${contentTypeUid}.${action}`;
+
+        console.log('Verificando Permissões existentes...');
+        const existingPermission = await strapi
+          .query('plugin::users-permissions.permission')
+          .findOne({
+            where: {
+              action: actionName,
+              role: publicRole.id,
+            },
+          });
+
+        if (existingPermission) {
+          await strapi.query('plugin::users-permissions.permission').update({
+            where: { id: existingPermission.id },
+            data: { enabled: true },
+          });
+        } else {
+          console.log('Criando as Permissões...');
+          await strapi.query('plugin::users-permissions.permission').create({
+            data: {
+              action: actionName,
+              role: publicRole.id,
+              enabled: true,
+            },
+          });
+        }
+      }
+    }
+
+    console.log('Permissões atualizadas com sucesso!');
+  },
 };
