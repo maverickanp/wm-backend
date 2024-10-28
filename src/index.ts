@@ -1,5 +1,3 @@
-// src/index.ts
-
 export default {
   register() {},
   bootstrap: async ({ strapi }) => {
