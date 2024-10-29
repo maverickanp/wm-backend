@@ -1,0 +1,218 @@
+[
+  {
+    "nome": "Acre",
+    "cidades": [
+      { "nome": "Rio Branco" },
+      { "nome": "Cruzeiro do Sul" },
+      { "nome": "Sena Madureira" }
+    ]
+  },
+  {
+    "nome": "Alagoas",
+    "cidades": [
+      { "nome": "Maceió" },
+      { "nome": "Arapiraca" },
+      { "nome": "Palmeira dos Índios" }
+    ]
+  },
+  {
+    "nome": "Amapá",
+    "cidades": [
+      { "nome": "Macapá" },
+      { "nome": "Santana" },
+      { "nome": "Laranjal do Jari" }
+    ]
+  },
+  {
+    "nome": "Amazonas",
+    "cidades": [
+      { "nome": "Manaus" },
+      { "nome": "Parintins" },
+      { "nome": "Itacoatiara" }
+    ]
+  },
+  {
+    "nome": "Bahia",
+    "cidades": [
+      { "nome": "Salvador" },
+      { "nome": "Feira de Santana" },
+      { "nome": "Vitória da Conquista" }
+    ]
+  },
+  {
+    "nome": "Ceará",
+    "cidades": [
+      { "nome": "Fortaleza" },
+      { "nome": "Caucaia" },
+      { "nome": "Juazeiro do Norte" }
+    ]
+  },
+  {
+    "nome": "Distrito Federal",
+    "cidades": [
+      { "nome": "Brasília" },
+      { "nome": "Ceilândia" },
+      { "nome": "Taguatinga" }
+    ]
+  },
+  {
+    "nome": "Espírito Santo",
+    "cidades": [
+      { "nome": "Vitória" },
+      { "nome": "Vila Velha" },
+      { "nome": "Serra" }
+    ]
+  },
+  {
+    "nome": "Goiás",
+    "cidades": [
+      { "nome": "Goiânia" },
+      { "nome": "Aparecida de Goiânia" },
+      { "nome": "Anápolis" }
+    ]
+  },
+  {
+    "nome": "Maranhão",
+    "cidades": [
+      { "nome": "São Luís" },
+      { "nome": "Imperatriz" },
+      { "nome": "São José de Ribamar" }
+    ]
+  },
+  {
+    "nome": "Mato Grosso",
+    "cidades": [
+      { "nome": "Cuiabá" },
+      { "nome": "Várzea Grande" },
+      { "nome": "Rondonópolis" }
+    ]
+  },
+  {
+    "nome": "Mato Grosso do Sul",
+    "cidades": [
+      { "nome": "Campo Grande" },
+      { "nome": "Dourados" },
+      { "nome": "Três Lagoas" }
+    ]
+  },
+  {
+    "nome": "Minas Gerais",
+    "cidades": [
+      { "nome": "Belo Horizonte" },
+      { "nome": "Uberlândia" },
+      { "nome": "Contagem" }
+    ]
+  },
+  {
+    "nome": "Pará",
+    "cidades": [
+      { "nome": "Belém" },
+      { "nome": "Ananindeua" },
+      { "nome": "Santarém" }
+    ]
+  },
+  {
+    "nome": "Paraíba",
+    "cidades": [
+      { "nome": "João Pessoa" },
+      { "nome": "Campina Grande" },
+      { "nome": "Santa Rita" }
+    ]
+  },
+  {
+    "nome": "Paraná",
+    "cidades": [
+      { "nome": "Curitiba" },
+      { "nome": "Londrina" },
+      { "nome": "Maringá" }
+    ]
+  },
+  {
+    "nome": "Pernambuco",
+    "cidades": [
+      { "nome": "Recife" },
+      { "nome": "Jaboatão dos Guararapes" },
+      { "nome": "Olinda" }
+    ]
+  },
+  {
+    "nome": "Piauí",
+    "cidades": [
+      { "nome": "Teresina" },
+      { "nome": "Parnaíba" },
+      { "nome": "Picos" }
+    ]
+  },
+  {
+    "nome": "Rio de Janeiro",
+    "cidades": [
+      { "nome": "Rio de Janeiro" },
+      { "nome": "São Gonçalo" },
+      { "nome": "Duque de Caxias" }
+    ]
+  },
+  {
+    "nome": "Rio Grande do Norte",
+    "cidades": [
+      { "nome": "Natal" },
+      { "nome": "Mossoró" },
+      { "nome": "Parnamirim" }
+    ]
+  },
+  {
+    "nome": "Rio Grande do Sul",
+    "cidades": [
+      { "nome": "Porto Alegre" },
+      { "nome": "Caxias do Sul" },
+      { "nome": "Pelotas" }
+    ]
+  },
+  {
+    "nome": "Rondônia",
+    "cidades": [
+      { "nome": "Porto Velho" },
+      { "nome": "Ji-Paraná" },
+      { "nome": "Ariquemes" }
+    ]
+  },
+  {
+    "nome": "Roraima",
+    "cidades": [
+      { "nome": "Boa Vista" },
+      { "nome": "Caracaraí" },
+      { "nome": "Rorainópolis" }
+    ]
+  },
+  {
+    "nome": "Santa Catarina",
+    "cidades": [
+      { "nome": "Florianópolis" },
+      { "nome": "Joinville" },
+      { "nome": "Blumenau" }
+    ]
+  },
+  {
+    "nome": "São Paulo",
+    "cidades": [
+      { "nome": "São Paulo" },
+      { "nome": "Guarulhos" },
+      { "nome": "Campinas" }
+    ]
+  },
+  {
+    "nome": "Sergipe",
+    "cidades": [
+      { "nome": "Aracaju" },
+      { "nome": "Nossa Senhora do Socorro" },
+      { "nome": "Lagarto" }
+    ]
+  },
+  {
+    "nome": "Tocantins",
+    "cidades": [
+      { "nome": "Palmas" },
+      { "nome": "Araguaína" },
+      { "nome": "Gurupi" }
+    ]
+  }
+]

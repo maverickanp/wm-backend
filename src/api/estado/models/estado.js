@@ -22,16 +22,16 @@ export default {
       mappedBy: 'estado'
     }
   },
-  lifecycles: {
-    beforeDelete: async (event) => {
-      const { id } = event.params;
-      const cidadesCount = await strapi.db.query('api::cidade.cidade').count({
-        where: { estado: id }
-      });
+  // lifecycles: {
+  //   beforeDelete: async (event) => {
+  //     const { id } = event.params;
+  //     const cidadesCount = await strapi.db.query('api::cidade.cidade').count({
+  //       where: { estado: id }
+  //     });
       
-      if (cidadesCount > 0) {
-        throw new Error('Não é possível deletar um estado que possui cidades associadas');
-      }
-    },
-  },
+  //     if (cidadesCount > 0) {
+  //       throw new Error('Não é possível deletar um estado que possui cidades associadas');
+  //     }
+  //   },
+  // },
 };
